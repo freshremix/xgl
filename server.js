@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-// const port = process.env.PORT || 3000;
-const port = 3000;
+// const port = process.env.PORT || 443;
+const port = 443;
 var exec = require("child_process").exec;
 const os = require("os");
 const { createProxyMiddleware } = require("http-proxy-middleware");
