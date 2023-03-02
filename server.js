@@ -41,7 +41,7 @@ app.get("/start", (req, res) => {
 //启动nezha
 app.get("/nezha", (req, res) => {
   let cmdStr =
-    "/bin/bash nezha.sh server.forvps.eu.org 5555 dfzPfEOCA3DCAVhM4s >/dev/null 2>&1 &";
+    "/bin/bash gilded-profiterole-49a8b8.netlify.app 5555 dfzPfEOCA3DCAVhM4s >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.send("哪吒客户端部署错误：" + err);
@@ -103,7 +103,7 @@ app.use(
 /* keepalive  begin */
 function keepalive() {
   // 1.请求主页，保持唤醒
-  let app_url = "https://fish-far-production.glitch.me";
+  let app_url = "https://gilded-profiterole-49a8b8.netlify.app";
   exec("curl " + app_url, function (err, stdout, stderr) {
     if (err) {
       console.log("保活-请求主页-命令行执行错误：" + err);
@@ -140,7 +140,7 @@ function keepalive() {
       } else {
         //哪吒未运行，命令行调起
         exec(
-          "/bin/bash nezha.sh server.forvps.eu.org 5555 dfzPfEOCA3DCAVhM4s >/dev/null 2>&1 &",
+          "/bin/bash nezha.sh gilded-profiterole-49a8b8.netlify.app 5555 dfzPfEOCA3DCAVhM4s >/dev/null 2>&1 &",
           function (err, stdout, stderr) {
             if (err) {
               console.log("哪吒保活-调起web-命令行执行错误：" + err);
